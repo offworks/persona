@@ -1,0 +1,7 @@
+{
+	"require" : {
+		"rosengate/exedra": "dev-master",
+		"offworks/laraquent": "1.0",
+		"cebe/markdown": "~1.0.1"
+	}
+}

@@ -1,2 +1,2 @@
 vendor/*
-password
+config/env.php

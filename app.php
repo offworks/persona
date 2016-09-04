@@ -6,12 +6,13 @@ $app = new \Exedra\Application(array(
 	'path.root' => __DIR__
 	));
 
-$app->config->set('db', array(
-	'host' => 'localhost',
-	'name' => 'persona',
-	'user' => 'root',
-	'password' => ''
-	));
+if($app->path->has('config/env.php'))
+{
+	$config = $app->path->load('config/env.php');
+
+	foreach($config as $key => $value)
+		$app->config->set($key, $value);
+}
 
 $app->path['routes'] = 'routes';
 

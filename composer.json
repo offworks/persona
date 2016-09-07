@@ -1,7 +1,7 @@
 {
 	"require" : {
 		"rosengate/exedra": "dev-master",
-		"offworks/laraquent": "1.0",
+		"offworks/laraquent": "^1.0",
 		"cebe/markdown": "~1.0.1",
 		"respect/validation": "^1.1",
 		"nesbot/carbon": "^1.21",

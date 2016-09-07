@@ -30,9 +30,7 @@
 
 	$web->middleware(function($exe)
 	{
-		$module = $exe->module['Web'];
-
-		return $exe->next($exe, $exe->module['Web']);
+		return $exe->next($exe);
 	});
 
 	$web['login']->method('GET|POST', '/login')->execute('controller=Web@login');

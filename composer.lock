@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a6b918e4144a3ac2f0b8bbbda6132572",
-    "content-hash": "dfa01175289e19a4926610fc735678e2",
+    "hash": "096a8b53a084d0c7963c7d35262becb8",
+    "content-hash": "8f891ec33a486d96552e9ec622b45f6e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -483,16 +483,16 @@
         },
         {
             "name": "offworks/laraquent",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/offworks/laraquent.git",
-                "reference": "cfa6bb11b20196921adab1ff97111f9c12a60714"
+                "reference": "74cbc6258acfda8f7213c701887a7b223aff954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/offworks/laraquent/zipball/cfa6bb11b20196921adab1ff97111f9c12a60714",
-                "reference": "cfa6bb11b20196921adab1ff97111f9c12a60714",
+                "url": "https://api.github.com/repos/offworks/laraquent/zipball/74cbc6258acfda8f7213c701887a7b223aff954f",
+                "reference": "74cbc6258acfda8f7213c701887a7b223aff954f",
                 "shasum": ""
             },
             "require": {
@@ -524,7 +524,7 @@
                 "orm",
                 "php-mysql"
             ],
-            "time": "2016-06-11 09:10:52"
+            "time": "2016-09-06 17:27:29"
         },
         {
             "name": "paragonie/random_compat",
@@ -644,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rosengate/exedra.git",
-                "reference": "7b7a3bc8de301d946c6d3fac2ac2b43315a59321"
+                "reference": "0a0de87896ee136070c1c4e2e15ada7bca4df82a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rosengate/exedra/zipball/7b7a3bc8de301d946c6d3fac2ac2b43315a59321",
-                "reference": "7b7a3bc8de301d946c6d3fac2ac2b43315a59321",
+                "url": "https://api.github.com/repos/Rosengate/exedra/zipball/0a0de87896ee136070c1c4e2e15ada7bca4df82a",
+                "reference": "0a0de87896ee136070c1c4e2e15ada7bca4df82a",
                 "shasum": ""
             },
             "type": "library",
@@ -680,7 +680,7 @@
                 "route",
                 "router"
             ],
-            "time": "2016-08-28 13:38:39"
+            "time": "2016-09-06 17:07:03"
         },
         {
             "name": "symfony/polyfill-mbstring",

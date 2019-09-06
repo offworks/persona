@@ -18,3 +18,7 @@ A simple blog project that utilizes exedra and range of tools like,
 - create a database named `persona`
 - duplicate `config/env.json.example` into `config/env.json`, setup db credential accordingly.
 - run `php database/schema.php` to migrate insert db schemas
+
+### testing
+- `cd public` and `php -S localhost:9000`
+- then run `http://localhost:9000` on your browser

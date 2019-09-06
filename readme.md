@@ -29,3 +29,6 @@ composer install
 ### testing
 - `cd public` and `php -S localhost:9000`
 - then run `http://localhost:9000` on your browser
+
+### routes
+run `php console.php app:routes` or `php console.php routeller:routes` to list the routing.

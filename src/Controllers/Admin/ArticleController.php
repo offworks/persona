@@ -8,12 +8,9 @@ use Persona\Entity\Article;
 use Respect\Validation\Exceptions\ExceptionInterface;
 
 /**
- * Class BlogController
- * @package Persona\Controllers\Admin
- *
  * @path /:article-id
  */
-class BlogController extends BaseController
+class ArticleController extends BaseController
 {
     public function middleware(Context $context)
     {

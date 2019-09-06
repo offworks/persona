@@ -52,7 +52,7 @@
 <body>
 <div class='container header'>
   {% if context.session.has('user_id') %}
-  <a href="{{ context.url.route('@admin.blogs.get-list') }}"><span class='fa fa-key'></span> Dashboard</a>
+  <a href="{{ context.url.route('@admin.articles.get-list') }}"><span class='fa fa-key'></span> Dashboard</a>
   {% endif %}
   {% if not context.session.has('user_id') %}
   <a href="{{ context.url.route('@web.auth.get-login') }}"><span class='fa fa-key'></span> Log In</a>

@@ -5,7 +5,7 @@ namespace Persona\Controllers;
 use Persona\Context;
 use Persona\Controllers\Admin\ApisController;
 use Persona\Controllers\Admin\AuthController;
-use Persona\Controllers\Admin\BlogsController;
+use Persona\Controllers\Admin\ArticlesController;
 use Persona\Controllers\Admin\DashboardController;
 use Persona\Controllers\Admin\ModalController;
 use Persona\Controllers\Admin\ProjectsController;
@@ -30,9 +30,9 @@ class AdminController extends BaseController
         return $context->next($context);
     }
 
-    public function groupBlogs()
+    public function groupArticles()
     {
-        return BlogsController::class;
+        return ArticlesController::class;
     }
 
     public function groupDashboard()

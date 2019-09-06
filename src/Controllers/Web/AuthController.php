@@ -46,6 +46,6 @@ class AuthController extends BaseController
 
         $context->session->set('user_id', $user->id);
 
-        return $context->redirect->route('@admin.blogs.get-list');
+        return $context->redirect->route('@admin.articles.get-list');
     }
 }

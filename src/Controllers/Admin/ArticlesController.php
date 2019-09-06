@@ -8,12 +8,10 @@ use Persona\Entity\Category;
 use Respect\Validation\Exceptions\ExceptionInterface;
 
 /**
- * Class BlogsController
- * @package Persona\Controllers\Admin
- *
- * @path /blogs
+ * @name articles
+ * @path /blog
  */
-class BlogsController extends BaseController
+class ArticlesController extends BaseController
 {
     /**
      * @path /create
@@ -57,12 +55,12 @@ class BlogsController extends BaseController
 
         $context->flash->set('message', 'New article added!');
 
-        return $context->redirect->route('@admin.blogs.get-list');
+        return $context->redirect->route('@admin.articles.get-list');
     }
 
-    public function groupBlog()
+    public function groupArticle()
     {
-        return BlogController::class;
+        return ArticleController::class;
     }
 
     /**

@@ -1,7 +1,8 @@
+{% set title = 'Article' %}
 {% extends "admin/layout.twig" %}
 {% block content %}
 {#<p>Basically a list of your articles. <a href='<?php echo $url->admin('blog', 'create');?>' class='fa fa-plus'></a></p>#}
-<p>Basically a list of your articles. <a href='{{ context.url.route('@admin.blogs.get-create') }}' class='fa fa-plus'></a></p>
+<p>Basically a list of your articles. <a href='{{ context.url.route('@admin.articles.get-create') }}' class='fa fa-plus'></a></p>
 <div class='table=responsive'>
   <table class='table'>
     <tr>
@@ -15,19 +16,19 @@
     <tr>
       <td>{{ no ? no + 1 : 1 }}</td>
       {#<td><?php echo !isset($no) ? $no = 1 : $no = $no + 1;?>.</td>#}
-      <td><a style="font-size: 20px;" href='{{ url.route('@admin.blogs.blog.get-update', {'article-id': article.id}) }}'>{{ article.title }}</td>
+      <td><a style="font-size: 20px;" href='{{ url.route('@admin.articles.article.get-update', {'article-id': article.id}) }}'>{{ article.title }}</td>
       <td>
         {% if article.category %}
         {{ article.category }}
         {% endif %}
       </td>
       <td>{{ article.created_at }}</td>
-      <td><a class='fa fa-times' href='{{ url.route('@admin.blogs.blog.get-delete', {'article-id': article.id}) }}'></a></td>
+      <td><a class='fa fa-times' href='{{ url.route('@admin.articles.article.get-delete', {'article-id': article.id}) }}'></a></td>
     </tr>
     {% endfor %}
     {% if articles.count == 0 %}
     <tr>
-      <td align="center" colspan="3">Can't find any~!</td>
+      <td align="center" colspan="5">Can't find any~!</td>
     </tr>
     {% endif %}
   </table>

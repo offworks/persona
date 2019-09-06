@@ -51,13 +51,19 @@ class RootController extends BaseController
         return $context->next($context);
     }
 
-    public function groupWeb()
-    {
-        return WebController::class;
-    }
-
+    /**
+     * @path /admin
+     */
     public function groupAdmin()
     {
         return AdminController::class;
+    }
+
+    /**
+     * @path /
+     */
+    public function groupWeb()
+    {
+        return WebController::class;
     }
 }

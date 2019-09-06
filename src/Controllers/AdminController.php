@@ -13,12 +13,6 @@ use Persona\Controllers\Admin\SettingsController;
 use Persona\Controllers\Admin\UserController;
 use Persona\Entity\User;
 
-/**
- * Class AdminController
- * @package Persona\Controllers
- *
- * @path /admin
- */
 class AdminController extends BaseController
 {
     public function middleware(Context $context)

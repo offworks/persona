@@ -11,8 +11,15 @@ A simple blog project that utilizes exedra and range of tools like,
 
 ## installation
 
+### clone
+`git clone https://github.com/offworks/persona`
+
 ### composer install
-`composer install`
+```
+cd persona
+
+composer install
+```
 
 ### env setup
 - create a database named `persona`

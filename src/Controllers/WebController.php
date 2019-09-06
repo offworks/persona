@@ -9,12 +9,6 @@ use Persona\Entity\Article;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
-/**
- * Class WebController
- * @package Persona\Controllers
- *
- * @path /
- */
 class WebController extends BaseController
 {
     /**

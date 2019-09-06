@@ -1,5 +1,0 @@
-<?php $app = require_once __DIR__.'/app.php';
-
-$app->wizard->add(\Persona\Wizard\Wizard::class);
-
-$app->wizard($argv);

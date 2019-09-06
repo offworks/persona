@@ -1,0 +1,27 @@
+{% set title = article.title %}
+{% extends "web/layout.twig" %}
+{% block content %}
+<style type="text/css">
+
+  .blog-post-body
+  {
+    font-size: 21px;
+  }
+
+  .blog-post-body pre
+  {
+    font-size: 19px;
+  }
+
+</style>
+<div class="row">
+  <div class='col-sm-9'>
+    <div class='blog-post-title'>
+      {{ article.created_at | date_diff }}
+    </div>
+    <div class="blog-post-body">
+      {{ article.getParsedBody | raw }}
+    </div>
+  </div>
+</div>
+{% endblock %}

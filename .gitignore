@@ -1,2 +1,4 @@
 vendor/*
 app/config/env.php
+.idea/*
+config/env.json

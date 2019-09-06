@@ -1,0 +1,27 @@
+{% set title = 'Profile' %}
+{% extends "admin/layout.twig" %}
+{% block content %}
+<p>Set your user information. <a href='{{ url.route('@admin.user.get-password') }}'>Change Password</a></p>
+<div class="row">
+  <div class="col-sm-6">
+    <form action="" method="POST" role="form">
+      <div class='form-group'>
+        <label>Name</label>
+        {{ form.text('name').attr('class="form-control"') | raw }}
+      </div>
+      <div class='form-group'>
+        <label>Email</label>
+        {{ form.text('email').attr('class="form-control"') | raw }}
+      </div>
+      <div class='form-group'>
+        <label>About</label>
+        {{ form.textarea('about').attr('class="form-control" style="height: 150px;"') | raw }}
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+<div class="row">
+
+</div>
+{% endblock %}

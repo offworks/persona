@@ -1,0 +1,32 @@
+{% set title = 'General Settings' %}
+{% extends "admin/layout.twig" %}
+{% block content %}
+<p>General settings of your blog</p>
+<div class="row">
+  <div class='col-sm-6'>
+    <h3>Categories <a href='javascript: persona.modal("{{ url.route('@admin.modal.get-create-category') }}");' class='fa fa-plus'></a></h3>
+    <div class='table-responsive'>
+      <table class='table'>
+        <tr>
+          <th width="20px">No.</th>
+          <th>Category</th>
+          <th width="170px">Date added</th>
+          <th width="20px"></th>
+        </tr>
+        {% set no = 0 %}
+        {% for category in categories %}
+        <tr>
+          <td>{{ no + 1 }}.</td>
+          <td>{{ category.name }}</td>
+          <td>{{ category.created_at }}</td>
+          <td>
+            <a href='{{ url.route('@admin.settings.category-delete', {'category-id': category.id}) }}' class='fa fa-times'></a>
+          </td>
+        </tr>
+        {% set no = no + 1 %}
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

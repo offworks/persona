@@ -1,0 +1,27 @@
+{% set title = "New Project" %}
+{% extends "admin/layout.twig" %}
+{% block content %}
+<p>Please complete it.. Em, I mean, please complete the form.</p>
+<div class="row">
+  <div class='col-sm-6'>
+    <form action="" method="POST" role="form">
+      <div class="form-group">
+        <label for="">Project Name</label>
+        {{ form.text('name').attr({"class": "form-control"}) | raw }}
+      </div>
+      <div class="form-group">
+        <label>About</label>
+        {{ form.textarea('description').attr({'class': 'form-control', 'style': 'height: 180px;'}) | raw }}
+      </div>
+      <div class="form-group">
+        <label>Dates</label>
+        <div>
+          {{ form.date('date_start').attr({'class': 'form-control', 'style': 'display: inline; width: 48%;'}) | raw }} to
+          {{ form.date('date_end').attr({'class': 'form-control', 'style': 'display: inline; width: 48%;'}) | raw }}
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

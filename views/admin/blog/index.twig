@@ -1,0 +1,38 @@
+{% extends "admin/layout.twig" %}
+{% block content %}
+{#<p>Basically a list of your articles. <a href='<?php echo $url->admin('blog', 'create');?>' class='fa fa-plus'></a></p>#}
+<p>Basically a list of your articles. <a href='{{ context.url.route('@admin.blogs.get-create') }}' class='fa fa-plus'></a></p>
+<div class='table=responsive'>
+  <table class='table'>
+    <tr>
+      <th style="width: 10px;">No.</th>
+      <th style="">Title</th>
+      <td></td>
+      <th style="width: 150px;">Written at</th>
+      <td style="width: 15px;"></td>
+    </tr>
+    {% for article in articles %}
+    <tr>
+      <td>{{ no ? no + 1 : 1 }}</td>
+      {#<td><?php echo !isset($no) ? $no = 1 : $no = $no + 1;?>.</td>#}
+      <td><a style="font-size: 20px;" href='{{ url.route('@admin.blogs.blog.get-update', {'article-id': article.id}) }}'>{{ article.title }}</td>
+      <td>
+        {% if article.category %}
+        {{ article.category }}
+        {% endif %}
+      </td>
+      <td>{{ article.created_at }}</td>
+      <td><a class='fa fa-times' href='{{ url.route('@admin.blogs.blog.get-delete', {'article-id': article.id}) }}'></a></td>
+    </tr>
+    {% endfor %}
+    {% if articles.count == 0 %}
+    <tr>
+      <td align="center" colspan="3">Can't find any~!</td>
+    </tr>
+    {% endif %}
+  </table>
+  <div>
+    <?php echo $paginator;?>
+  </div>
+</div>
+{% endblock %}

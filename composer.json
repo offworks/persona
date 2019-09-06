@@ -1,10 +1,18 @@
 {
 	"require" : {
-		"rosengate/exedra": "dev-master",
+		"rosengate/exedra": "~1.0",
 		"offworks/laraquent": "^1.0",
 		"cebe/markdown": "~1.0.1",
 		"respect/validation": "^1.1",
 		"nesbot/carbon": "^1.21",
-		"jasongrimes/paginator": "~1.0"
+		"jasongrimes/paginator": "~1.0",
+		"twig/twig": "^2.11",
+		"symfony/console": "^3.4",
+		"filp/whoops": "^2.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Persona\\": "src/"
+		}
 	}
 }
